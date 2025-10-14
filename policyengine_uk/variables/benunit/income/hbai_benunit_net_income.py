@@ -1,5 +1,4 @@
 from policyengine_uk.model_api import *
-import numpy as np
 
 class hbai_benunit_net_income(Variable):
     value_type = float
