@@ -4,21 +4,19 @@ from policyengine_uk.model_api import *
 class savings(Variable):
     label = "Savings"
     documentation = "Household liquid savings"
-    entity = BenUnit
-    definition_period = YEAR
-    value_type = float
-    unit = GBP
-    uprating = "gov.economic_assumptions.indices.obr.per_capita.gdp"
-
-
-'''
-class savings(Variable):
-    label = "Savings"
-    documentation = "Household liquid savings"
     entity = Household
     definition_period = YEAR
     value_type = float
     unit = GBP
     quantity_type = STOCK
     uprating = "gov.economic_assumptions.indices.obr.per_capita.gdp"
-'''
+
+
+class benunit_savings(Variable):
+    label = "Savings"
+    documentation = "Household liquid savings"
+    entity = BenUnit
+    definition_period = YEAR
+    value_type = float
+    unit = GBP
+    uprating = "gov.economic_assumptions.indices.obr.per_capita.gdp"
