@@ -23,3 +23,25 @@ class benunit_equivalisation_bhc(Variable):
             + 0.33 * count_older_children
             + 0.2 * count_young_children
         )
+
+
+class household_sum_of_benunit_equivalisation_bhc(Variable):
+    value_type = float
+    entity = Household
+    label = "Household sum over BenUnit equivalisation factors, for BHC factors."
+    definition_period = YEAR
+
+    adds = ["benunit_equivalisation_bhc"]
+
+
+class benunit_share_of_household_equiv_bhc(Variable):
+    value_type = float
+    entity = BenUnit
+    label = "BenUnit share of equivalisation, for use in allocating Household-level quantities to BenUnit."
+    definition_period = YEAR
+
+    def formula(benunit, period, parameters):
+        benunit_equivalisation_factor = benunit("benunit_equivalisation_bhc", period)
+        household_sum_of_benunit_equivalisation_bhc = benunit.household("household_sum_of_benunit_equivalisation_bhc", period)
+        return benunit_equivalisation_factor / household_sum_of_benunit_equivalisation_bhc
+    
