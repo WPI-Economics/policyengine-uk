@@ -14,6 +14,7 @@ HBAI_NET_INCOME_ELEMENTS = [
     "free_school_fruit_veg", #Person
     "free_school_milk", #Person
     "child_benefit", #BenUnit
+    "council_tax_benefit", #BenUnit
     "esa_income", #BenUnit
     "esa_contrib", #Person
     "housing_benefit", #BenUnit
