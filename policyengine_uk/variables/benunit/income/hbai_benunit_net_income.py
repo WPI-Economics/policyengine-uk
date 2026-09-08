@@ -41,6 +41,8 @@ HBAI_NET_INCOME_ELEMENTS = [
     "ssmg", #Person
     "tax_free_childcare", #Person
     "healthy_start_vouchers", #Person
+    "scottish_child_payment", #Person
+    "carer_support_payment", #Person
     # Reference for tax-free-childcare: https://assets.publishing.service.gov.uk/media/5e7b191886650c744175d08b/households-below-average-income-1994-1995-2018-2019.pdf
 ]
 
